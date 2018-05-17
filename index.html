@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='app'>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome/fontawesome-all.min.css">
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./libs/particles.min.js"></script>
+    <script src="./app/app.module.js"></script>
+    <script src="./app/app.controller.js"></script>
+  </head>
+  <body ng-controller='appController'>
+    <div class="container-fluid full-height">
+      <div class="row full-height">
+        <div class="col-md-3 bg-black full-height nav-container">
+          <div class="nav-headline-container">
+            <h3 class="text-white">Pham Bao Ngoc</h3>
+          </div>
+          <div class="nav-button-container">
+            <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Home</h4>
+                  <small class="text-muted">A little about me</small>
+                </div>
+              </div>
+            </div>
+            <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Skills</h4>
+                  <small class="text-muted">What I can do</small>
+                </div>
+              </div>
+            </div>
+            <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}"> 
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Projects</h4>
+                  <small class="text-muted">Some of my projects i've done</small>
+                </div>
+              </div>
+            </div>
+            <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Contact</h4>
+                  <small class="text-muted">Get in touch with me!</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-credit-container horizontal-center vertical-center">
+            <h5><i>Produced by Pham Bao Ngoc.</i></h5>
+          </div>
+        </div>
+        
+        <div class="col-md-7 bg-black-transparent-1 full-height custom-overflow">
+          <div id="particles" class="full-height bg-particle"></div>
+          <div class="content-outer-container">
+            <div class="row">
+              <!-- Home -->
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation" ng-if="screenState === 'home'">
+                <div class="col-xs-12">
+                  <div class="col-md-7 col-xs-12 content-outer__info-container">
+                    <div>
+                      <h3 class="text-uppercase">Hello, my name is Ngoc!</h3>
+                      <p class="text-white">Pham Bao Ngoc, 22 years young, a junior web developer in Hanoi, Vietnam.</p>
+                      <hr>
+                      <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at Akira Technology, where I spend most of my time working on awesome projects and serving more than 1 million customers.</p>
+                      <p class="custom-text-muted">I believe good design is clear thinking and I love watching simple but creative, good UX designs.</p>
+                      <p class="custom-text-muted">I am also a lifetime learner. I spent my free time reading books and learning various new skills via EDX, Udemy and FreeCodeCamp...</p> 
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="col-md-5 hidden-sm hidden-xs content-outer__avatar-container">
+                    <img class="thumbnail" src="./assets/img/avatar.jpg">
+                  </div>
+                </div>
+
+                <!-- Education -->
+                <div class="col-xs-12 content-outer__info-container">
+                  <div class="content-outer__education-container">
+                    <h3>My Education</h3>
+                    <div class="row">
+                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                        <div class="col-md-3">
+                          <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
+                            <span>2017</span>
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="content-outer__education-container__school-container vertical-center horizontal-center">
+                            <span>Techkids Coding School</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                        <div class="col-md-3">
+                          <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
+                            <span>2014 - 2018</span>
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="content-outer__education-container__school-container vertical-center horizontal-center">
+                            <span>Hanoi University Of Science And Technology</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                        <div class="col-md-3">
+                          <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
+                            <span>2011 - 2014</span>
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="content-outer__education-container__school-container vertical-center horizontal-center">
+                            <span>Kim Lien High School</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Work Experience -->
+                <div class="col-xs-12 content-outer__info-container">
+                  <div class="content-outer__education-container">
+                    <h3>Work Experience</h3>
+                    <div class="row">
+                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                        <div class="col-md-3">
+                          <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
+                            <span>2018 - Now</span>
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="content-outer__education-container__school-container vertical-center horizontal-center">
+                            <span>Techkids Asia Software</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                        <div class="col-md-3">
+                          <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
+                            <span>2017 - 2018</span>
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="content-outer__education-container__school-container vertical-center horizontal-center">
+                            <span>Akira Technology</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills -->
+              <!-- Projects -->
+              <!-- Contact -->
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container" ng-if="screenState === 'contact'">
+                <div>
+                  <h3 class="text-uppercase">Anything I can help?</h3>
+                  <h5>Contact me now!</h5>
+                  <hr>
+                  <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about myself or my experience, to ask for my resume, random questions about things, or about some freelance jobs... just feel free to drop me a line anytime.</p>
+                  <hr>
+                  <div class="contact-container">
+                    <div class="row">
+                      <div class="col-md-8 col-xs-12">
+                        <div class="col-xs-3 cursor-pointer">
+                          <a href="https://www.facebook.com/ppppbn" target="_blank">
+                            <i class="fab fa-facebook-square fa-3x"></i>
+                          </a>
+                        </div>
+                        <div class="col-xs-3 cursor-pointer">
+                          <a href="https://www.linkedin.com/in/ppppbn/" target="_blank">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                          </a>
+                        </div>
+                        <div class="col-xs-3 cursor-pointer">
+                          <a href="https://github.com/ppppbn" target="_blank">
+                            <i class="fab fa-github-square fa-3x"></i>
+                          </a>
+                        </div>
+                        <div class="col-xs-3 cursor-pointer">
+                          <a href="mailto:phambaongoc1511@gmail.com" target="_blank">
+                            <i class="fas fa-envelope-square fa-3x"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 full-height custom-no-padding">
+          <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
+          <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
+          <div class="col-md-3 full-height bg-black-transparent-1 custom-no-padding"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
