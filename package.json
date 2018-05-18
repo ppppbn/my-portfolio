@@ -4,17 +4,19 @@
   "description": "Pham Bao Ngoc's Portfolio.",
   "main": "index.html",
   "engines": {
-    "node" : "9.3.0",
-    "npm" : "6.0.0"
+    "node": "9.3.0",
+    "npm": "6.0.0"
   },
   "scripts": {
-    "install" : "npm install; bower install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm install; bower install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.10",
-    "angular-animate": "^1.7.0"
+    "angular-animate": "^1.7.0",
+    "bower": "^1.8.4"
   }
 }
