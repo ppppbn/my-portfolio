@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en' ng-app='app'>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,6 +10,8 @@
     <link rel="stylesheet" href="./assets/fontawesome/fontawesome-all.min.css">
     <script src="./bower_components/angular/angular.min.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="./libs/particles.min.js"></script>
     <script src="./app/app.module.js"></script>
     <script src="./app/app.controller.js"></script>
@@ -16,7 +19,9 @@
   <body ng-controller='appController'>
     <div class="container-fluid full-height">
       <div class="row full-height">
-        <div class="col-md-3 bg-black full-height nav-container">
+
+        <!-- Desktop Nav Menu -->
+        <div class="col-md-3 col-xs-12 bg-black full-height nav-container hidden-sm hidden-xs">
           <div class="nav-headline-container">
             <h3 class="text-white">Pham Bao Ngoc</h3>
             <h5 class="custom-text-muted">A Web Developer</h5>
@@ -71,15 +76,39 @@
             <h5><i>Produced by Pham Bao Ngoc.</i></h5>
           </div>
         </div>
+
+        <!-- Mobile Navigator -->
+        <div class="col-xs-12 hidden-md hidden-lg custom-no-padding custom-z-index-2">
+          <nav class="navbar navbar-inverse hidden-md hidden-lg navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="" ng-click="changeState('home')">Pham Bao Ngoc</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li ng-class="{'active' : screenState === 'home'}"><a href="" ng-click="changeState('home')">Home</a></li>
+                  <li ng-class="{'active' : screenState === 'skill'}"><a href="" ng-click="changeState('skill')">Skills</a></li>
+                  <li ng-class="{'active' : screenState === 'project'}"><a href="" ng-click="changeState('project')">Projects</a></li>
+                  <li ng-class="{'active' : screenState === 'contact'}"><a href="" ng-click="changeState('contact')">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
         
         <div class="col-md-7 bg-black-transparent-1 full-height custom-overflow">
           <div id="particles" class="full-height bg-particle"></div>
           <div class="content-outer-container">
             <div class="row">
               <!-- Home -->
-              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation" ng-if="screenState === 'home'">
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation mobile-home-container" ng-if="screenState === 'home'">
                 <div class="col-xs-12 custom-no-padding">
-                  <div class="col-md-7 col-xs-12 custom-no-padding content-outer__info-container">
+                  <div class="col-sm-7 col-xs-12 custom-no-padding content-outer__info-container">
                     <div>
                       <h3 class="text-uppercase">Hi, my name is Ngoc!</h3>
                       <p class="text-white">Pham Bao Ngoc, 22 years young, a junior web developer in Hanoi, Vietnam.</p>
@@ -90,7 +119,7 @@
                       <hr>
                     </div>
                   </div>
-                  <div class="col-md-5 hidden-sm hidden-xs content-outer__avatar-container">
+                  <div class="col-sm-5 hidden-xs content-outer__avatar-container">
                     <img class="thumbnail" src="./assets/img/avatar-2.jpg">
                   </div>
                 </div>
@@ -101,36 +130,36 @@
                     <h3>My Education</h3>
                     <div class="row">
                       <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
-                        <div class="col-md-3">
+                        <div class="col-sm-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2017</span>
                           </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-sm-9">
                           <div class="content-outer__education-container__school-container vertical-center horizontal-center">
                             <span>Techkids Coding School</span>
                           </div>
                         </div>
                       </div>
                       <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
-                        <div class="col-md-3">
+                        <div class="col-sm-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2014 - 2018</span>
                           </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-sm-9">
                           <div class="content-outer__education-container__school-container vertical-center horizontal-center">
                             <span>Hanoi University Of Science And Technology</span>
                           </div>
                         </div>
                       </div>
                       <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
-                        <div class="col-md-3">
+                        <div class="col-sm-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2011 - 2014</span>
                           </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-sm-9">
                           <div class="content-outer__education-container__school-container vertical-center horizontal-center">
                             <span>Kim Lien High School</span>
                           </div>
@@ -145,24 +174,24 @@
                     <h3>Work Experience</h3>
                     <div class="row">
                       <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
-                        <div class="col-md-3">
+                        <div class="col-sm-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2018 - Now</span>
                           </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-sm-9">
                           <div class="content-outer__education-container__school-container vertical-center horizontal-center">
                             <span>Techkids Asia Software</span>
                           </div>
                         </div>
                       </div>
                       <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
-                        <div class="col-md-3">
+                        <div class="col-sm-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2017 - 2018</span>
                           </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-sm-9">
                           <div class="content-outer__education-container__school-container vertical-center horizontal-center">
                             <span>Akira Technology</span>
                           </div>
@@ -179,23 +208,45 @@
                   <h3 class="text-uppercase">Skills & Expertise</h3>
                   <h5 class="content-sub-text">I am developing my skills as a MERN Stack developer.</h5>
                   <hr>
-                  <h5 class="text-uppercase content-outer__separated-paragraph">Frontend</h5>
-                  <p class="custom-text-muted">- HTML5 / CSS3</p>
-                  <p class="custom-text-muted">- Javascript ES6 / jQuery</p>
-                  <p class="custom-text-muted">- AngularJS</p>
-                  <p class="custom-text-muted">- ReactJS</p>
-                  <hr>
-                  <h5 class="text-uppercase content-outer__separated-paragraph">Backend & Database</h5>
-                  <p class="custom-text-muted">- NodeJS (Express / Sails.io)</p>
-                  <p class="custom-text-muted">- NoSQL (MongoDB)</p>
-                  <hr>
-                  <h5 class="text-uppercase content-outer__separated-paragraph">Mobile App</h5>
-                  <p class="custom-text-muted">- React Native</p>
-                  <hr>
-                  <h5 class="text-uppercase content-outer__separated-paragraph">Other Developer Skills</h5>
-                  <p class="custom-text-muted">- Git / GitHub / GitLab</p>
-                  <p class="custom-text-muted">- Sketch / Photoshop</p>
-                  <p class="custom-text-muted">- Agile / Scrum</p>
+                  <div class="row content-outer__separated-paragraph">
+                    <div class="col-xs-12 custom-no-padding custom-display-flex-mobile">
+                      <div class="col-md-12 col-xs-6">
+                        <div>
+                          <h5 class="text-uppercase">Frontend</h5>
+                          <p class="custom-text-muted">- HTML5 / CSS3</p>
+                          <p class="custom-text-muted">- Javascript ES6 / jQuery</p>
+                          <p class="custom-text-muted">- AngularJS</p>
+                          <p class="custom-text-muted">- ReactJS</p>
+                          <hr class="hidden-sm hidden-xs">
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-xs-6">
+                        <div>
+                          <h5 class="text-uppercase">Backend & Database</h5>
+                          <p class="custom-text-muted">- NodeJS (Express / Sails.io)</p>
+                          <p class="custom-text-muted">- NoSQL (MongoDB)</p>
+                          <hr class="hidden-sm hidden-xs">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 custom-no-padding custom-display-flex-mobile">
+                      <div class="col-md-12 col-xs-6">
+                        <div>
+                          <h5 class="text-uppercase">Mobile App</h5>
+                          <p class="custom-text-muted">- React Native</p>
+                          <hr class="hidden-sm hidden-xs">
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-xs-6">
+                        <div>
+                          <h5 class="text-uppercase">Other Developer Skills</h5>
+                          <p class="custom-text-muted">- Git / GitHub / GitLab</p>
+                          <p class="custom-text-muted">- Sketch / Photoshop</p>
+                          <p class="custom-text-muted">- Agile / Scrum</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Projects -->
@@ -216,7 +267,7 @@
                   <hr>
                   <div class="contact-container">
                     <div class="row">
-                      <div class="col-md-8 col-xs-12">
+                      <div class="col-md-8 col-sm-6">
                         <div class="col-xs-3 cursor-pointer">
                           <a href="https://www.facebook.com/ppppbn" target="_blank">
                             <i class="fab fa-facebook-square fa-3x"></i>
@@ -245,7 +296,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2 full-height custom-no-padding">
+        <div class="col-md-2 full-height custom-no-padding hidden-sm hidden-xs">
           <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
           <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
           <div class="col-md-3 full-height bg-black-transparent-1 custom-no-padding"></div>

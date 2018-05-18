@@ -53,6 +53,11 @@ body {
 .custom-display-flex {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .custom-display-flex-mobile {
+    display: flex;
+  }
+}
 .custom-overflow {
   overflow: scroll;
 }
@@ -71,7 +76,7 @@ body {
 }
 .nav-container .nav-button-container-child {
   height: 100px;
-  padding-left: 40px;
+  padding-left: 5%;
   cursor: pointer;
 }
 .nav-container .nav-button-container-child .nav-child__selection-icon-container {
@@ -90,7 +95,10 @@ body {
 .nav-container .nav-credit-container {
   background: #161616;
   padding: 20px;
-  margin: 0px -15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .nav-container small {
   font-style: italic;
@@ -100,6 +108,11 @@ body {
   color: white;
   padding: 50px 0px;
   overflow: scroll;
+}
+@media screen and (max-width: 768px) {
+  .content-outer-container .content-outer__info-container {
+    padding-left: 20px;
+  }
 }
 .content-outer-container .content-outer__info-container .content-sub-text {
   margin-top: 30px;
@@ -162,4 +175,12 @@ body {
 .contact-container a:hover {
   color: white;
   filter: brightness(0.6);
+}
+.custom-z-index-2 {
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .mobile-home-container {
+    padding-top: 15px;
+  }
 }
