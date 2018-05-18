@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Pham Bao Ngoc's Portfolio.",
   "main": "index.html",
+  "engines": {
+    "node" : "9.3.0",
+    "npm" : "6.0.0"
+  },
   "scripts": {
+    "install" : "npm install; bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
