@@ -5,7 +5,7 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fontawesome/fontawesome-all.min.css">
     <script src="./node_modules/angular/angular.min.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
@@ -19,6 +19,7 @@
         <div class="col-md-3 bg-black full-height nav-container">
           <div class="nav-headline-container">
             <h3 class="text-white">Pham Bao Ngoc</h3>
+            <h5 class="custom-text-muted">A Web Developer</h5>
           </div>
           <div class="nav-button-container">
             <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
@@ -77,10 +78,10 @@
             <div class="row">
               <!-- Home -->
               <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation" ng-if="screenState === 'home'">
-                <div class="col-xs-12">
-                  <div class="col-md-7 col-xs-12 content-outer__info-container">
+                <div class="col-xs-12 custom-no-padding">
+                  <div class="col-md-7 col-xs-12 custom-no-padding content-outer__info-container">
                     <div>
-                      <h3 class="text-uppercase">Hello, my name is Ngoc!</h3>
+                      <h3 class="text-uppercase">Hi, my name is Ngoc!</h3>
                       <p class="text-white">Pham Bao Ngoc, 22 years young, a junior web developer in Hanoi, Vietnam.</p>
                       <hr>
                       <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at Akira Technology, where I spend most of my time working on awesome projects and serving more than 1 million customers.</p>
@@ -90,16 +91,16 @@
                     </div>
                   </div>
                   <div class="col-md-5 hidden-sm hidden-xs content-outer__avatar-container">
-                    <img class="thumbnail" src="./assets/img/avatar.jpg">
+                    <img class="thumbnail" src="./assets/img/avatar-2.jpg">
                   </div>
                 </div>
 
                 <!-- Education -->
-                <div class="col-xs-12 content-outer__info-container">
+                <div class="col-xs-12 custom-no-padding content-outer__info-container">
                   <div class="content-outer__education-container">
                     <h3>My Education</h3>
                     <div class="row">
-                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
                         <div class="col-md-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2017</span>
@@ -111,7 +112,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
                         <div class="col-md-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2014 - 2018</span>
@@ -123,7 +124,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
                         <div class="col-md-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2011 - 2014</span>
@@ -139,11 +140,11 @@
                   </div>
                 </div>
                 <!-- Work Experience -->
-                <div class="col-xs-12 content-outer__info-container">
+                <div class="col-xs-12 custom-no-padding content-outer__info-container">
                   <div class="content-outer__education-container">
                     <h3>Work Experience</h3>
                     <div class="row">
-                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
                         <div class="col-md-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2018 - Now</span>
@@ -155,7 +156,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-xs-12 custom-display-flex content-outer__education-container__big-container">
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-outer__education-container__big-container">
                         <div class="col-md-3">
                           <div class="content-outer__education-container__timestamp-container vertical-center horizontal-center">
                             <span>2017 - 2018</span>
@@ -173,12 +174,43 @@
               </div>
 
               <!-- Skills -->
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container" ng-if="screenState === 'skill'">
+                <div>
+                  <h3 class="text-uppercase">Skills & Expertise</h3>
+                  <h5 class="content-sub-text">I am developing my skills as a MERN Stack developer.</h5>
+                  <hr>
+                  <h5 class="text-uppercase content-outer__separated-paragraph">Frontend</h5>
+                  <p class="custom-text-muted">- HTML5 / CSS3</p>
+                  <p class="custom-text-muted">- Javascript ES6 / jQuery</p>
+                  <p class="custom-text-muted">- AngularJS</p>
+                  <p class="custom-text-muted">- ReactJS</p>
+                  <hr>
+                  <h5 class="text-uppercase content-outer__separated-paragraph">Backend & Database</h5>
+                  <p class="custom-text-muted">- NodeJS (Express / Sails.io)</p>
+                  <p class="custom-text-muted">- NoSQL (MongoDB)</p>
+                  <hr>
+                  <h5 class="text-uppercase content-outer__separated-paragraph">Mobile App</h5>
+                  <p class="custom-text-muted">- React Native</p>
+                  <hr>
+                  <h5 class="text-uppercase content-outer__separated-paragraph">Other Developer Skills</h5>
+                  <p class="custom-text-muted">- Git / GitHub / GitLab</p>
+                  <p class="custom-text-muted">- Sketch / Photoshop</p>
+                  <p class="custom-text-muted">- Agile /</p>
+                </div>
+              </div>
               <!-- Projects -->
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container" ng-if="screenState === 'project'">
+                <div>
+                  <h3 class="text-uppercase">My projects</h3>
+                  <h5 class="content-sub-text">All projects i've done so far will be listed here. Will update soon!</h5>
+                  <hr>
+                </div>
+              </div>
               <!-- Contact -->
               <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container" ng-if="screenState === 'contact'">
                 <div>
                   <h3 class="text-uppercase">Anything I can help?</h3>
-                  <h5>Contact me now!</h5>
+                  <h5 class="content-sub-text">Contact me now!</h5>
                   <hr>
                   <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about myself or my experience, to ask for my resume, random questions about things, or some freelance jobs... just feel free to drop me a line anytime.</p>
                   <hr>

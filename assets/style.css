@@ -67,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 70%;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .nav-container .nav-button-container-child {
   height: 100px;
@@ -100,6 +100,9 @@ body {
   color: white;
   padding: 50px 0px;
   overflow: scroll;
+}
+.content-outer-container .content-outer__info-container .content-sub-text {
+  margin-top: 30px;
 }
 .content-outer-container .content-outer__info-container .text-white {
   margin-top: 30px;
