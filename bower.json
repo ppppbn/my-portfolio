@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "description": "Pham Bao Ngoc's Portfolio",
+  "main": "index.html",
+  "authors": [
+    "ppppbn <phambaongoc1511@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ppppbn/my-portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.7.0",
+    "angular": "1.6.10"
+  }
+}
