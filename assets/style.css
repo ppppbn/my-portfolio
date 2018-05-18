@@ -184,3 +184,8 @@ body {
     padding-top: 15px;
   }
 }
+@media screen and (max-width: 768px) {
+  .mobile-column-margin {
+    margin: 15px 0px;
+  }
+}
