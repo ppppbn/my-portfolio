@@ -73,6 +73,12 @@ html, body {
   }
 }
 
+.custom-display-flex-no-mobile {
+  @media screen and (min-width: 768px){
+    display: flex;
+  }
+}
+
 .custom-overflow {
   overflow: scroll;
 }
@@ -133,9 +139,6 @@ html, body {
   padding: 50px 0px;
   overflow : scroll;
   .content-outer__info-container {
-    @media screen and (max-width: 768px){
-      padding-left: 20px;
-    }
     .content-sub-text {
       margin-top: 30px;
     }
@@ -163,6 +166,10 @@ html, body {
         border: 1px solid white;
         padding: 10px;
         width: 100%;
+        @media screen and (max-width: 450px){
+          padding: 30px 10px;
+          margin-top: -20px;
+        }
       }
     }
   }
@@ -206,6 +213,14 @@ html, body {
     color : white;
     filter: brightness(0.6);
   }
+}
+
+.custom-z-index-0 {
+  z-index : 0;
+}
+
+.custom-z-index-1 {
+  z-index: 1;
 }
 
 .custom-z-index-2 {

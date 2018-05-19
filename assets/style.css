@@ -58,6 +58,11 @@ body {
     display: flex;
   }
 }
+@media screen and (min-width: 768px) {
+  .custom-display-flex-no-mobile {
+    display: flex;
+  }
+}
 .custom-overflow {
   overflow: scroll;
 }
@@ -109,11 +114,6 @@ body {
   padding: 50px 0px;
   overflow: scroll;
 }
-@media screen and (max-width: 768px) {
-  .content-outer-container .content-outer__info-container {
-    padding-left: 20px;
-  }
-}
 .content-outer-container .content-outer__info-container .content-sub-text {
   margin-top: 30px;
 }
@@ -140,6 +140,12 @@ body {
   border: 1px solid white;
   padding: 10px;
   width: 100%;
+}
+@media screen and (max-width: 450px) {
+  .content-outer-container .content-outer__info-container .content-outer__education-container .content-outer__education-container__school-container {
+    padding: 30px 10px;
+    margin-top: -20px;
+  }
 }
 .content-outer-container .content-outer__avatar-container img {
   width: 100%;
@@ -175,6 +181,12 @@ body {
 .contact-container a:hover {
   color: white;
   filter: brightness(0.6);
+}
+.custom-z-index-0 {
+  z-index: 0;
+}
+.custom-z-index-1 {
+  z-index: 1;
 }
 .custom-z-index-2 {
   z-index: 2;
