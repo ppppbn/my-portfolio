@@ -7,8 +7,13 @@ function appController($scope, $rootScope, $timeout) {
     // console.log('callback - particles.js config loaded');
   });  
   $scope.screenState = 'home';
-  $scope.changeState = function(state){
+  $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
+      if(!brand) {
+        if($('.navbar-toggle').css('display') !='none'){
+          $('.navbar-toggle').click();
+        }
+      }
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;
