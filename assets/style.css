@@ -64,7 +64,8 @@ body {
   }
 }
 .custom-overflow {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .visibility-hidden {
   opacity: 0 !important;
@@ -112,7 +113,6 @@ body {
   z-index: 1;
   color: white;
   padding: 50px 0px;
-  overflow: scroll;
 }
 .content-outer-container .content-outer__info-container .content-sub-text {
   margin-top: 30px;
@@ -200,4 +200,18 @@ body {
   .mobile-column-margin {
     margin: 15px 0px;
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111;
 }
