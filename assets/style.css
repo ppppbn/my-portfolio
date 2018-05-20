@@ -73,6 +73,7 @@ body {
 .nav-container .nav-headline-container {
   margin-top: 60px;
   margin-left: 10%;
+  cursor: pointer;
 }
 .nav-container .nav-button-container {
   display: flex;
@@ -254,4 +255,5 @@ hr {
 .outer-particle-container {
   position: relative;
   height: auto;
+  min-height: 100%;
 }

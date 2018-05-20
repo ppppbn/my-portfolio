@@ -11,7 +11,7 @@
     "install": "npm install; bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "deploy" : "git add .; git commit -m 'Deploy app'; git push origin master; git push heroku master;"
+    "deploy" : "lessc assets/style.less assets/style.css ; git add .; git commit -m 'Deploy app'; git push origin master; git push heroku master;"
   },
   "author": "",
   "license": "ISC",
