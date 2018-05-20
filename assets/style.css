@@ -151,6 +151,20 @@ body {
   width: 100%;
   margin-top: 20px;
 }
+.content-skill .content-skill__title-container {
+  background: #006ca3;
+  z-index: 1;
+  border-radius: 5px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.content-skill .content-skill__skill-container {
+  text-align: left;
+  border: 1px solid white;
+  z-index: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 .ng-animation {
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -201,6 +215,11 @@ body {
     margin: 15px 0px;
   }
 }
+@media screen and (min-width: 768px) {
+  .desktop-column-margin {
+    margin: 20px 0px;
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
   display: none;
@@ -218,4 +237,7 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #111;
+}
+hr {
+  border: 1px solid #256ca3;
 }
