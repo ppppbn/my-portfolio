@@ -1,107 +1,122 @@
 <!DOCTYPE html>
 <html lang='en' ng-app='app'>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fontawesome/fontawesome-all.min.css">
-    <script src="./bower_components/angular/angular.min.js"></script>
-    <script src="./bower_components/angular-animate/angular-animate.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="./libs/particles.min.js"></script>
-    <script src="./app/app.module.js"></script>
-    <script src="./app/app.controller.js"></script>
-  </head>
-  <body ng-controller='appController'>
-    <div class="container-fluid full-height">
-      <div class="row full-height">
 
-        <!-- Desktop Nav Menu -->
-        <div class="col-md-3 col-xs-12 bg-black full-height nav-container hidden-sm hidden-xs">
-          <div class="nav-headline-container" ng-click="changeState('home', true)">
-            <h3 class="text-white">Pham Bao Ngoc</h3>
-            <h5 class="custom-text-muted">A Web Developer</h5>
-          </div>
-          <div class="nav-button-container">
-            <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
-              <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
-                  <div class="nav-child__selection-icon"></div>
-                </div>
-                <div class="nav-child__text-container">
-                  <h4 class="text-white text-uppercase">Home</h4>
-                  <small class="text-muted">A little about me</small>
-                </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fontawesome/fontawesome-all.min.css">
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-animate/angular-animate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="./libs/particles.min.js"></script>
+  <script src="./app/app.module.js"></script>
+  <script src="./app/app.controller.js"></script>
+</head>
+
+<body ng-controller='appController'>
+  <div class="container-fluid full-height">
+    <div class="row full-height">
+
+      <!-- Desktop Nav Menu -->
+      <div class="col-md-3 col-xs-12 bg-black full-height nav-container hidden-sm hidden-xs">
+        <div class="nav-headline-container" ng-click="changeState('home', true)">
+          <h3 class="text-white">Pham Bao Ngoc</h3>
+          <h5 class="custom-text-muted">A Web Developer</h5>
+        </div>
+        <div class="nav-button-container">
+          <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
+            <div class="custom-display-flex">
+              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
+                <div class="nav-child__selection-icon"></div>
               </div>
-            </div>
-            <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
-              <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
-                  <div class="nav-child__selection-icon"></div>
-                </div>
-                <div class="nav-child__text-container">
-                  <h4 class="text-white text-uppercase">Skills</h4>
-                  <small class="text-muted">What I can do</small>
-                </div>
-              </div>
-            </div>
-            <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
-              <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}"> 
-                  <div class="nav-child__selection-icon"></div>
-                </div>
-                <div class="nav-child__text-container">
-                  <h4 class="text-white text-uppercase">Projects</h4>
-                  <small class="text-muted">Some of my projects i've done</small>
-                </div>
-              </div>
-            </div>
-            <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
-              <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
-                  <div class="nav-child__selection-icon"></div>
-                </div>
-                <div class="nav-child__text-container">
-                  <h4 class="text-white text-uppercase">Contact</h4>
-                  <small class="text-muted">Get in touch with me!</small>
-                </div>
+              <div class="nav-child__text-container">
+                <h4 class="text-white text-uppercase">Home</h4>
+                <small class="text-muted">A little about me</small>
               </div>
             </div>
           </div>
-          <div class="nav-credit-container horizontal-center vertical-center">
-            <h5><i>Produced by Pham Bao Ngoc.</i></h5>
+          <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
+            <div class="custom-display-flex">
+              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
+                <div class="nav-child__selection-icon"></div>
+              </div>
+              <div class="nav-child__text-container">
+                <h4 class="text-white text-uppercase">Skills</h4>
+                <small class="text-muted">What I can do</small>
+              </div>
+            </div>
+          </div>
+          <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
+            <div class="custom-display-flex">
+              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}">
+                <div class="nav-child__selection-icon"></div>
+              </div>
+              <div class="nav-child__text-container">
+                <h4 class="text-white text-uppercase">Projects</h4>
+                <small class="text-muted">Some of my projects i've done</small>
+              </div>
+            </div>
+          </div>
+          <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
+            <div class="custom-display-flex">
+              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
+                <div class="nav-child__selection-icon"></div>
+              </div>
+              <div class="nav-child__text-container">
+                <h4 class="text-white text-uppercase">Contact</h4>
+                <small class="text-muted">Get in touch with me!</small>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Mobile Navigator -->
-        <div class="col-xs-12 hidden-md hidden-lg custom-no-padding custom-z-index-2">
-          <nav class="navbar navbar-inverse hidden-md hidden-lg navbar-fixed-top">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
-                </button>
-                <a class="navbar-brand" href="" ng-click="changeState('home', true)">Pham Bao Ngoc</a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li ng-class="{'active' : screenState === 'home'}"><a href="" ng-click="changeState('home')">Home</a></li>
-                  <li ng-class="{'active' : screenState === 'skill'}"><a href="" ng-click="changeState('skill')">Skills</a></li>
-                  <li ng-class="{'active' : screenState === 'project'}"><a href="" ng-click="changeState('project')">Projects</a></li>
-                  <li ng-class="{'active' : screenState === 'contact'}"><a href="" ng-click="changeState('contact')">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <div class="nav-credit-container horizontal-center vertical-center">
+          <h5>
+            <i>Produced by Pham Bao Ngoc.</i>
+          </h5>
         </div>
-        
-        <div class="col-md-7 bg-black-transparent-1 full-height custom-overflow">
+      </div>
+
+      <!-- Mobile Navigator -->
+      <div class="col-xs-12 hidden-md hidden-lg custom-no-padding custom-z-index-2">
+        <nav class="navbar navbar-inverse hidden-md hidden-lg navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="" ng-click="changeState('home', true)">Pham Bao Ngoc</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li ng-class="{'active' : screenState === 'home'}">
+                  <a href="" ng-click="changeState('home')">Home</a>
+                </li>
+                <li ng-class="{'active' : screenState === 'skill'}">
+                  <a href="" ng-click="changeState('skill')">Skills</a>
+                </li>
+                <li ng-class="{'active' : screenState === 'project'}">
+                  <a href="" ng-click="changeState('project')">Projects</a>
+                </li>
+                <li ng-class="{'active' : screenState === 'contact'}">
+                  <a href="" ng-click="changeState('contact')">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="col-md-7 bg-black-transparent-1 full-height custom-overflow">
+        <div class="outer-particle-container">
           <div id="particles" class="full-height bg-particle"></div>
           <div class="content-outer-container">
             <div class="row">
@@ -114,9 +129,11 @@
                         <h3 class="text-uppercase">Hi, my name is Ngoc!</h3>
                         <p class="text-white">Pham Bao Ngoc, 22 years young, a junior web developer in Hanoi, Vietnam.</p>
                         <hr>
-                        <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at Akira Technology, where I spend most of my time working on awesome projects and serving more than 1 million customers.</p>
+                        <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at Akira Technology, where I spend most of my time working on awesome projects
+                          and serving more than 1 million customers.</p>
                         <p class="custom-text-muted">I believe good design is clear thinking and I love watching simple but creative, good UX designs.</p>
-                        <p class="custom-text-muted">I am also a lifetime learner. I spent my free time reading books and learning various new skills via EDX, Udemy and FreeCodeCamp...</p> 
+                        <p class="custom-text-muted">I am also a lifetime learner. I spent my free time reading books and learning various new skills
+                          via EDX, Udemy and FreeCodeCamp...</p>
                         <hr>
                       </div>
                     </div>
@@ -297,7 +314,8 @@
                   <h3 class="text-uppercase">Anything I can help?</h3>
                   <h5 class="content-sub-text">Contact me now!</h5>
                   <hr>
-                  <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about myself or my experience, to ask for my resume, random questions about things, or some freelance jobs... just feel free to drop me a line anytime.</p>
+                  <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about myself or my experience, to ask for my resume, random questions about
+                    things, or some freelance jobs... just feel free to drop me a line anytime.</p>
                   <hr>
                   <div class="contact-container">
                     <div class="row">
@@ -330,12 +348,14 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2 full-height custom-no-padding hidden-sm hidden-xs">
-          <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
-          <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
-          <div class="col-md-3 full-height bg-black-transparent-1 custom-no-padding"></div>
-        </div>
+      </div>
+      <div class="col-md-2 full-height custom-no-padding hidden-sm hidden-xs">
+        <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
+        <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
+        <div class="col-md-3 full-height bg-black-transparent-1 custom-no-padding"></div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

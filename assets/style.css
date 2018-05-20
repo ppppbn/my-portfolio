@@ -251,3 +251,7 @@ body {
 hr {
   border: 1px solid #256ca3;
 }
+.outer-particle-container {
+  position: relative;
+  height: auto;
+}
