@@ -9,7 +9,7 @@ function appController($scope, $rootScope, $timeout) {
   $scope.screenState = 'home';
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
-      $("#particles").fadeOut(300);
+      $("#particles").fadeOut(150);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
           $('.navbar-toggle').click();
