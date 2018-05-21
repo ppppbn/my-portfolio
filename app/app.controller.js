@@ -18,7 +18,9 @@ function appController($scope, $rootScope, $timeout) {
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;
-        $("#particles").fadeIn(1000);
+        $timeout(function(){
+          $("#particles").fadeIn(700);
+        }, 300)
       }, 300);
     }
   }
