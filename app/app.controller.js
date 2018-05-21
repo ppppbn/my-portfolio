@@ -9,7 +9,7 @@ function appController($scope, $rootScope, $timeout) {
   $scope.screenState = 'home';
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
-      $("#particles").fadeOut(500);
+      $("#particles").fadeOut(300);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
           $('.navbar-toggle').click();
@@ -18,8 +18,8 @@ function appController($scope, $rootScope, $timeout) {
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;
-        $("#particles").fadeIn(500);
-      }, 550);
+        $("#particles").fadeIn(1000);
+      }, 300);
     }
   }
 }
