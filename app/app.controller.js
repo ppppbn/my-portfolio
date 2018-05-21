@@ -3,12 +3,21 @@ angular.module('app')
 
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
+  if(window.location.hash){
+    $scope.screenState = window.location.hash.substr(1);  
+  }
+  else {
+    window.location.hash = "home";
+    $scope.screenState = 'home';
+  }
+
+  //load particles in background
   particlesJS.load('particles', './configs/particles.json', function() {
-    // console.log('callback - particles.js config loaded');
-  });  
-  $scope.screenState = 'home';
+    //TODO : Load successfully
+  });      
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
+      window.location.hash = state;
       $("#particles").fadeOut(150);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
