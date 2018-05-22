@@ -142,7 +142,7 @@ body {
   padding: 10px;
   width: 100%;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 767px) {
   .content-outer-container .content-outer__info-container .content-outer__education-container .content-outer__education-container__school-container {
     padding: 30px 10px;
     margin-top: -20px;
