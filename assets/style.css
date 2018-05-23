@@ -176,6 +176,13 @@ body {
 .content-skill .content-skill_content-container-child {
   padding-bottom: 20px;
 }
+.content-project-paragraph {
+  width: 100%;
+}
+.content-project-paragraph a {
+  width: 100%;
+  word-wrap: break-word;
+}
 .ng-animation {
   -webkit-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
