@@ -11,6 +11,12 @@ function appController($scope, $rootScope, $timeout) {
     $scope.screenState = 'home';
   }
 
+  if($scope.screenState === 'contact'){
+    $timeout(function(){
+      $('.contact-container').fadeIn(500);
+    },1000);
+  }
+
   //load particles in background
   particlesJS.load('particles', './configs/particles.json', function() {
     //TODO : Load successfully
@@ -27,6 +33,11 @@ function appController($scope, $rootScope, $timeout) {
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;
+        if(state === 'contact'){
+          $timeout(function(){
+            $('.contact-container').fadeIn(1000);
+          },500);
+        }
         $timeout(function(){
           $("#particles").fadeIn(700);
         }, 300)

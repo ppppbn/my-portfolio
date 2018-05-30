@@ -209,6 +209,7 @@ body {
 }
 .contact-container {
   margin-top: 45px;
+  display: none;
 }
 .contact-container a {
   color: white;
