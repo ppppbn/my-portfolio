@@ -176,6 +176,11 @@ body {
 .content-skill .content-skill_content-container-child {
   padding-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .content-skill .content-skill_content-container-child {
+    height: 77%;
+  }
+}
 .content-project-paragraph {
   width: 100%;
 }
