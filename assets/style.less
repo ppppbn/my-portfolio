@@ -340,3 +340,44 @@ hr {
 .custom-break-word {
   word-wrap: break-word;
 }
+
+@-webkit-keyframes Animation {
+  0%{background-position:0% 0%}
+  25%{ackground-position:50% 50%}
+  50%{background-position:100% 100%}
+  75%{ackground-position:50% 50%}
+  100%{background-position:0% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:0% 0%}
+  25%{ackground-position:50% 50%}
+  50%{background-position:100% 100%}
+  75%{ackground-position:50% 50%}
+  100%{background-position:0% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:0% 0%}
+  25%{ackground-position:50% 50%}
+  50%{background-position:100% 100%}
+  75%{ackground-position:50% 50%}
+  100%{background-position:0% 0%}
+}
+
+.animated-background {
+  animation: Animation 5s ease infinite;
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  background-size: 200% 200% !important;
+}
+
+.cover-bg {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 5;
+}

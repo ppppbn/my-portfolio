@@ -3,6 +3,13 @@ angular.module('app')
 
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
+  window.onload = function(){
+    $timeout(function(){
+      $(".cover-bg").fadeOut(2000);
+    },800);    
+  }
+
+
   if(window.location.hash){
     $scope.screenState = window.location.hash.substr(1);  
   }
@@ -35,11 +42,11 @@ function appController($scope, $rootScope, $timeout) {
         $scope.screenState = state;
         if(state === 'contact'){
           $timeout(function(){
-            $('.contact-container').fadeIn(1000);
+            $('.contact-container').fadeIn(500);
           },500);
         }
         $timeout(function(){
-          $("#particles").fadeIn(700);
+          $("#particles").fadeIn(500);
         }, 300)
       }, 300);
     }
