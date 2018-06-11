@@ -7,7 +7,7 @@ function appController($scope, $rootScope, $timeout) {
     $timeout(function(){
       $(".cover-bg").fadeOut(1500, function(){
         $timeout(function(){
-          $("#particles").fadeIn(transitionTime * 1.5);
+          $("#particles").show(transitionTime * 2);
         }, transitionTime * 1.5);
       });      
     },800);    
