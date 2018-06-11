@@ -508,11 +508,11 @@ hr {
 .twinkling {
   background: transparent url(images/twinkling.png) repeat top center;
   z-index: 1;
-  -moz-animation: move-twink-back 300s linear infinite;
-  -ms-animation: move-twink-back 300s linear infinite;
-  -o-animation: move-twink-back 300s linear infinite;
-  -webkit-animation: move-twink-back 300s linear infinite;
-  animation: move-twink-back 300s linear infinite;
+  -moz-animation: move-twink-back 400s linear infinite;
+  -ms-animation: move-twink-back 400s linear infinite;
+  -o-animation: move-twink-back 400s linear infinite;
+  -webkit-animation: move-twink-back 400s linear infinite;
+  animation: move-twink-back 400s linear infinite;
 }
 .clouds {
   background: transparent url(images/clouds.png) repeat top center;
@@ -525,5 +525,4 @@ hr {
 }
 .content-project__text-container {
   width: fit-content;
-  text-align: justify;
 }
