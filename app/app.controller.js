@@ -3,6 +3,7 @@ angular.module('app')
 
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
+  var preventFastClick = false;
   window.onload = function(){
     $timeout(function(){
       $(".cover-bg").fadeOut(1500);
@@ -28,21 +29,28 @@ function appController($scope, $rootScope, $timeout) {
     //TODO : Load successfully
   });      
   $scope.changeState = function(state, brand){
-    if(state !== $scope.screenState){
-      window.location.hash = state;
-      $("#particles").fadeOut(transitionTime);
-      if(!brand) {
-        if($('.navbar-toggle').css('display') !='none'){
-          $('.navbar-toggle').click();
+    if(preventFastClick) return;
+    else {
+      if(state !== $scope.screenState){
+        preventFastClick = true;
+        window.location.hash = state;
+        $("#particles").fadeOut(transitionTime);
+        if(!brand) {
+          if($('.navbar-toggle').css('display') !='none'){
+            $('.navbar-toggle').click();
+          }
         }
-      }
-      $scope.screenState = "";
-      $timeout(function(){
-        $scope.screenState = state;
+        $scope.screenState = "";
         $timeout(function(){
-          $("#particles").fadeIn(transitionTime * 1.5);
-        }, transitionTime / 4)
-      }, transitionTime);
-    }
+          $scope.screenState = state;
+          $timeout(function(){
+            $("#particles").fadeIn(transitionTime, function(){
+              preventFastClick = false;
+            });            
+          }, transitionTime / 2)
+        }, transitionTime);
+      }
+      else return;
+    }    
   }
 }
