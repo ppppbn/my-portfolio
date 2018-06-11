@@ -25,9 +25,9 @@ function appController($scope, $rootScope, $timeout) {
   }
 
   //load particles in background
-  particlesJS.load('particles', './configs/particles.json', function() {
-    //TODO : Load successfully
-  });      
+  // particlesJS.load('particles', './configs/particles.json', function() {
+  //   //TODO : Load successfully
+  // });      
   $scope.changeState = function(state, brand){
     if(preventFastClick) return;
     else {
@@ -42,7 +42,7 @@ function appController($scope, $rootScope, $timeout) {
         }
         $scope.screenState = "";
         $timeout(function(){
-          $scope.screenState = state;
+          $scope.screenState = state;          
           $timeout(function(){
             $("#particles").fadeIn(transitionTime, function(){
               preventFastClick = false;
