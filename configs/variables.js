@@ -1,0 +1,1 @@
+const transitionTime = 500;

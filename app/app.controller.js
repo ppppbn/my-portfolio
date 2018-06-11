@@ -30,7 +30,7 @@ function appController($scope, $rootScope, $timeout) {
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
       window.location.hash = state;
-      $("#particles").hide(600);
+      $("#particles").fadeOut(transitionTime);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
           $('.navbar-toggle').click();
@@ -40,9 +40,9 @@ function appController($scope, $rootScope, $timeout) {
       $timeout(function(){
         $scope.screenState = state;
         $timeout(function(){
-          $("#particles").show(1000);
-        }, 400)
-      }, 600);
+          $("#particles").fadeIn(transitionTime * 1.5);
+        }, transitionTime / 4)
+      }, transitionTime);
     }
   }
 }
