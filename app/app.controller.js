@@ -5,7 +5,7 @@ appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
   window.onload = function(){
     $timeout(function(){
-      $(".cover-bg").fadeOut(2000);
+      $(".cover-bg").fadeOut(1500);
     },800);    
   }
 
@@ -30,7 +30,7 @@ function appController($scope, $rootScope, $timeout) {
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
       window.location.hash = state;
-      $("#particles").fadeOut(200);
+      $("#particles").hide(600);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
           $('.navbar-toggle').click();
@@ -40,8 +40,8 @@ function appController($scope, $rootScope, $timeout) {
       $timeout(function(){
         $scope.screenState = state;
         $timeout(function(){
-          $("#particles").fadeIn(300);
-        }, 600)
+          $("#particles").show(1000);
+        }, 400)
       }, 600);
     }
   }
