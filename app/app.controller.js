@@ -9,7 +9,6 @@ function appController($scope, $rootScope, $timeout) {
     },800);    
   }
 
-
   if(window.location.hash){
     $scope.screenState = window.location.hash.substr(1);  
   }
@@ -31,7 +30,7 @@ function appController($scope, $rootScope, $timeout) {
   $scope.changeState = function(state, brand){
     if(state !== $scope.screenState){
       window.location.hash = state;
-      $("#particles").fadeOut(150);
+      $("#particles").fadeOut(200);
       if(!brand) {
         if($('.navbar-toggle').css('display') !='none'){
           $('.navbar-toggle').click();
@@ -40,15 +39,10 @@ function appController($scope, $rootScope, $timeout) {
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;
-        if(state === 'contact'){
-          $timeout(function(){
-            $('.contact-container').fadeIn(500);
-          },500);
-        }
         $timeout(function(){
-          $("#particles").fadeIn(500);
-        }, 300)
-      }, 300);
+          $("#particles").fadeIn(300);
+        }, 600)
+      }, 600);
     }
   }
 }
