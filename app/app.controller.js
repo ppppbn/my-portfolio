@@ -41,6 +41,7 @@ function appController($scope, $rootScope, $timeout) {
       $scope.screenState = "";
       $timeout(function(){
         $scope.screenState = state;          
+        $('#content-container').animate({ scrollTop: (0) }, 'fast');
         $timeout(function(){
           $("#particles").fadeIn(transitionTime);            
         }, transitionTime / 2)
