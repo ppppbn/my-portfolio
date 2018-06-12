@@ -4,13 +4,11 @@ angular.module('app')
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
   window.onload = function(){
-    $timeout(function(){
-      $(".cover-bg").fadeOut(1500, function(){
-        $timeout(function(){
-          $("#particles").show(transitionTime * 2);
-        }, transitionTime * 1.5);
-      });      
-    },800);    
+    $(".cover-bg").fadeOut(500, function(){
+      $timeout(function(){
+        $("#particles").show(transitionTime * 3);
+      }, transitionTime );
+    });          
   }
 
   if(window.location.hash){
