@@ -25,11 +25,7 @@ function appController($scope, $rootScope, $timeout) {
       $('.contact-container').fadeIn(500);
     },1000);
   }
-
-  //load particles in background
-  // particlesJS.load('particles', './configs/particles.json', function() {
-  //   //TODO : Load successfully
-  // });      
+  
   $scope.changeState = function(state, brand){    
     if(state !== $scope.screenState){
       window.location.hash = state;
