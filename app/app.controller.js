@@ -3,9 +3,9 @@ angular.module('app')
 
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
-  window.onload = function(){
-    $(".container-fluid").removeClass("custom-overflow-y-hidden");
+  window.onload = function(){    
     $(".cover-bg").fadeOut(500, function(){
+      $(".container-fluid").removeClass("custom-overflow-y-hidden");
       $timeout(function(){
         $("#particles").show(transitionTime * 3);
       }, transitionTime );
@@ -25,7 +25,7 @@ function appController($scope, $rootScope, $timeout) {
       $('.contact-container').fadeIn(500);
     },1000);
   }
-  
+
   $scope.changeState = function(state, brand){    
     if(state !== $scope.screenState){
       window.location.hash = state;
