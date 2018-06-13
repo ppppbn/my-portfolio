@@ -21,67 +21,69 @@
   <script src="./app/app.controller.js"></script>
 </head>
 
-<body ng-controller='appController'>
+<body ng-controller='appController' class="custom-overflow">
   <div class="cover-bg animated-background"></div>
   <div class="container-fluid full-height">
     <div class="row full-height">
 
       <!-- Desktop Nav Menu -->
-      <div class="col-md-3 col-xs-12 bg-black full-height nav-container hidden-sm hidden-xs">
-        <div class="nav-headline-container" ng-click="changeState('home', true)">
-          <h3 class="text-white">Pham Bao Ngoc</h3>
-          <h5 class="custom-text-muted">A Web Developer</h5>
-        </div>
-        <div class="nav-button-container">
-          <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
-            <div class="custom-display-flex">
-              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
-                <div class="nav-child__selection-icon"></div>
+      <div class="col-md-3 bg-black full-height nav-container hidden-sm hidden-xs navbar-fixed-container">
+        <div class="">
+          <div class="nav-headline-container" ng-click="changeState('home', true)">
+            <h3 class="text-white">Pham Bao Ngoc</h3>
+            <h5 class="custom-text-muted">A Web Developer</h5>
+          </div>
+          <div class="nav-button-container">
+            <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Home</h4>
+                  <small class="text-muted">A little about me</small>
+                </div>
               </div>
-              <div class="nav-child__text-container">
-                <h4 class="text-white text-uppercase">Home</h4>
-                <small class="text-muted">A little about me</small>
+            </div>
+            <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Skills</h4>
+                  <small class="text-muted">What I can do</small>
+                </div>
+              </div>
+            </div>
+            <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Projects</h4>
+                  <small class="text-muted">Some of my projects i've done</small>
+                </div>
+              </div>
+            </div>
+            <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
+              <div class="custom-display-flex">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
+                  <div class="nav-child__selection-icon"></div>
+                </div>
+                <div class="nav-child__text-container">
+                  <h4 class="text-white text-uppercase">Contact</h4>
+                  <small class="text-muted">Get in touch with me!</small>
+                </div>
               </div>
             </div>
           </div>
-          <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
-            <div class="custom-display-flex">
-              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
-                <div class="nav-child__selection-icon"></div>
-              </div>
-              <div class="nav-child__text-container">
-                <h4 class="text-white text-uppercase">Skills</h4>
-                <small class="text-muted">What I can do</small>
-              </div>
-            </div>
+          <div class="nav-credit-container horizontal-center vertical-center">
+            <h5>
+              <i>Produced by Pham Bao Ngoc.</i>
+            </h5>
           </div>
-          <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
-            <div class="custom-display-flex">
-              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}">
-                <div class="nav-child__selection-icon"></div>
-              </div>
-              <div class="nav-child__text-container">
-                <h4 class="text-white text-uppercase">Projects</h4>
-                <small class="text-muted">Some of my projects i've done</small>
-              </div>
-            </div>
-          </div>
-          <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
-            <div class="custom-display-flex">
-              <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
-                <div class="nav-child__selection-icon"></div>
-              </div>
-              <div class="nav-child__text-container">
-                <h4 class="text-white text-uppercase">Contact</h4>
-                <small class="text-muted">Get in touch with me!</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-credit-container horizontal-center vertical-center">
-          <h5>
-            <i>Produced by Pham Bao Ngoc.</i>
-          </h5>
         </div>
       </div>
 
@@ -117,8 +119,8 @@
         </nav>
       </div>
 
-      <div class="col-md-7 col-xs-12 bg-black-transparent-1 full-height custom-no-padding custom-overflow-x-hidden" id="content-container">
-        <div class="outer-particle-container custom-overflow">
+      <div class="col-md-7 col-md-offset-3 col-xs-12 col-xs-offset-0 bg-black-transparent-1 custom-overflow-x-hidden custom-no-padding full-min-height" id="content-container">
+        <div class="outer-particle-container">
           <div id="particles" class="full-height bg-particle">
             <div class="animated-spin">
               <div class="stars"></div>
@@ -236,7 +238,7 @@
                   <h5 class="content-sub-text">I am developing my skills as a MERN Stack developer.</h5>
                   <hr>
                   <div class="row content-outer__separated-paragraph">
-                    <div class="col-xs-12 custom-no-padding custom-display-flex-no-mobile">
+                    <div class="col-xs-12 custom-display-flex-no-mobile">
                       <div class="col-sm-5 col-xs-12 content-skill__skill-container">
                         <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
                           <h5 class="text-uppercase">Frontend</h5>
@@ -270,7 +272,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xs-12 custom-no-padding custom-display-flex-no-mobile">
+                    <div class="col-xs-12 custom-display-flex-no-mobile">
                       <div class="col-sm-5 col-xs-12 content-skill__skill-container">
                         <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
                           <h5 class="text-uppercase">Mobile</h5>
@@ -427,7 +429,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2 full-height custom-no-padding hidden-sm hidden-xs">
+      <div class="col-md-2 full-height custom-no-padding hidden-sm hidden-xs fixed-grad-bg">
         <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
         <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
         <div class="col-md-3 full-height bg-black-transparent-4 custom-no-padding"></div>

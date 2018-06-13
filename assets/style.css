@@ -10,13 +10,13 @@ body {
   background: rgba(0, 0, 0, 0.96);
 }
 .bg-black-transparent-2 {
-  background: rgba(0, 0, 0, 0.87);
+  background: rgba(0, 0, 0, 0.95);
 }
 .bg-black-transparent-3 {
-  background: rgba(0, 0, 0, 0.89);
+  background: rgba(0, 0, 0, 0.94);
 }
 .bg-black-transparent-4 {
-  background: rgba(0, 0, 0, 0.91);
+  background: rgba(0, 0, 0, 0.93);
 }
 .bg-particle {
   position: absolute;
@@ -25,15 +25,22 @@ body {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  opacity: 0.45;
+  opacity: 1;
   z-index: 0;
   overflow: hidden;
 }
 .custom-no-padding {
   padding: 0px;
 }
-.custom-no-padding-left {
-  padding-left: 0px;
+@media screen and (min-width: 769px) {
+  .custom-no-padding-left {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom-no-padding-left {
+    padding: 0px;
+  }
 }
 .cursor-pointer {
   cursor: pointer;
@@ -74,6 +81,7 @@ body {
 .custom-overflow {
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .custom-overflow-x-hidden {
   overflow-x: hidden;
@@ -295,6 +303,7 @@ hr {
 }
 .content-project-title {
   color: white;
+  line-height: 1.5;
 }
 .custom-break-word {
   word-wrap: break-word;
@@ -530,4 +539,18 @@ hr {
 .content-project__text-container {
   width: fit-content;
   max-width: 100%;
+}
+.navbar-fixed-container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+}
+.fixed-grad-bg {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+.full-min-height {
+  min-height: 100%;
 }
