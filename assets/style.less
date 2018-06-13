@@ -104,6 +104,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.custom-overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .visibility-hidden {
   opacity: 0 !important;
 }
@@ -310,21 +314,21 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  display: none;
-  opacity: 0;
+  width: 8px;
+  background: transparent;
+  // display: none;
+  // opacity: 0;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
-  display: none;
+  background : rgba(0,0,0,0.93);
 }
 
 ::-webkit-scrollbar-thumb {
   background: black; 
   border-radius : 10px;
   border : 1px solid #555;
-  display: none;
+  // display: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -336,7 +340,6 @@ hr {
 }
 
 .outer-particle-container {
-  position: relative;
   height : auto;
   min-height: 100%;
 }
@@ -552,4 +555,8 @@ hr {
 
 .full-min-height {
   min-height: 100%;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }

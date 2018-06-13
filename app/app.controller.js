@@ -4,6 +4,7 @@ angular.module('app')
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
   window.onload = function(){
+    $(".container-fluid").removeClass("custom-overflow-y-hidden");
     $(".cover-bg").fadeOut(500, function(){
       $timeout(function(){
         $("#particles").show(transitionTime * 3);
