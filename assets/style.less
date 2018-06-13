@@ -376,6 +376,10 @@ hr {
   width: 12000px;
   height : 12000px;
   transform-origin: center; 
+  --clouds-transition-time : 200s;
+  @media screen and (max-width: 768px) {
+    --clouds-transition-time : 100s
+  }
 }
 
 @-webkit-keyframes Animation {
@@ -529,14 +533,17 @@ hr {
   -webkit-animation:move-twink-back 400s linear infinite;
   animation:move-twink-back 400s linear infinite;
 }
+
+
 .clouds{
+  
   background:transparent url(images/clouds.png) repeat top center;
   z-index:3;
-  -moz-animation:move-clouds-back 200s linear infinite;
-  -ms-animation:move-clouds-back 200s linear infinite;
-  -o-animation:move-clouds-back 200s linear infinite;
-  -webkit-animation:move-clouds-back 200s linear infinite;
-  animation:move-clouds-back 200s linear infinite;
+  -moz-animation:move-clouds-back var(--clouds-transition-time) linear infinite;
+  -ms-animation:move-clouds-back var(--clouds-transition-time) linear infinite;
+  -o-animation:move-clouds-back var(--clouds-transition-time) linear infinite;
+  -webkit-animation:move-clouds-back var(--clouds-transition-time) linear infinite;
+  animation:move-clouds-back var(--clouds-transition-time) linear infinite;
 }
 
 .content-project__text-container {

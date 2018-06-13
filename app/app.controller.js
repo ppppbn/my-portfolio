@@ -7,7 +7,7 @@ function appController($scope, $rootScope, $timeout) {
     $(".cover-bg").fadeOut(500, function(){
       $(".container-fluid").removeClass("custom-overflow-y-hidden");
       $timeout(function(){
-        $("#particles").show(transitionTime * 3);
+        $("#particles").fadeIn(transitionTime * 5);
       }, transitionTime );
     });          
   }
