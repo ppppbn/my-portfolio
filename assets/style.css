@@ -176,6 +176,8 @@ body {
 .content-outer-container .content-outer__avatar-container img {
   width: 100%;
   margin-top: 20px;
+  border-radius: 50%;
+  display: inline-block;
 }
 .content-skill .content-skill__title-container {
   background: #006ca3;

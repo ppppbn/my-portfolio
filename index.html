@@ -14,7 +14,6 @@
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js"></script>
   <script src="./configs/variables.js"></script>
   <script src="./app/app.module.js"></script>
   <script src="./app/app.controller.js"></script>
@@ -132,8 +131,8 @@
               <!-- Home -->
               <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation mobile-home-container" ng-show="screenState === 'home'">
                 <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 custom-no-padding">
-                  <div class="col-xs-12 custom-no-padding">
-                    <div class="col-sm-7 col-xs-12 custom-no-padding content-outer__info-container">
+                  <div class="col-xs-12 custom-no-padding custom-display-flex-no-mobile">
+                    <div class="col-lg-7 col-md-6 col-xs-12 custom-no-padding content-outer__info-container vertical-center">
                       <div>
                         <h3 class="text-uppercase">Hi, my name is Ngoc!</h3>
                         <p class="text-white">Pham Bao Ngoc, 22 years young, a junior web developer in Hanoi, Vietnam.</p>
@@ -146,9 +145,8 @@
                         <hr>
                       </div>
                     </div>
-                    <div class="col-sm-5 hidden-xs content-outer__avatar-container">
-                      <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ppppbn"><a class="LI-simple-link" href='https://vn.linkedin.com/in/ppppbn?trk=profile-badge'>Phạm Ngọc</a></div>
-                      <!-- <img class="thumbnail" src="./assets/img/avatar.jpg"> -->
+                    <div class="col-lg-5 col-md-6 hidden-xs content-outer__avatar-container">
+                      <img class="thumbnail" src="./assets/img/avatar.jpg">
                     </div>
                   </div>
 
