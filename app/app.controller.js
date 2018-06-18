@@ -5,7 +5,7 @@ appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
   window.onload = function(){    
     $timeout(function(){
-      $(".loader").hide();
+      $(".loader").fadeOut(500)
       $(".cover-bg").fadeOut(500, function(){
         $(".container-fluid").removeClass("custom-overflow-y-hidden");
         $timeout(function(){
