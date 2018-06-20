@@ -192,6 +192,12 @@ body {
   z-index: 0;
   margin-top: 25px;
   margin-bottom: 25px;
+  min-height: 200px;
+}
+@media screen and (max-width: 768px) {
+  .content-skill .content-skill__skill-container {
+    min-height: 175px;
+  }
 }
 .content-skill .content-skill_icon-container {
   border-right: 1px dashed white;
