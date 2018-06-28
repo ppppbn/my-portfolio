@@ -14,6 +14,7 @@
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="./configs/variables.js"></script>
   <script src="./app/app.module.js"></script>
   <script src="./app/app.controller.js"></script>
@@ -125,9 +126,9 @@
         <div class="outer-particle-container">
           <div id="particles" class="full-height bg-particle">
             <div class="animated-spin">
-              <div class="stars"></div>
-              <div class="twinkling"></div>
-              <div class="clouds"></div>
+              <div class="stars js-preload-bg"></div>
+              <div class="twinkling js-preload-bg"></div>
+              <div class="clouds js-preload-bg"></div>
             </div>
           </div>
           <div class="content-outer-container">

@@ -4,15 +4,19 @@ angular.module('app')
 appController.$inject = ['$scope', '$rootScope', '$timeout'];
 function appController($scope, $rootScope, $timeout) {
   window.onload = function(){    
-    $timeout(function(){
-      $(".loader").fadeOut(500)
-      $(".cover-bg").fadeOut(500, function(){
-        $(".container-fluid").removeClass("custom-overflow-y-hidden");
-        $timeout(function(){
-          $("#particles").fadeIn(transitionTime * 3);
-        }, transitionTime );
-      });          
-    }, 1000)
+    $(".js-preload-bg").imagesLoaded({
+      background : true
+    }, function(){
+      $timeout(function(){
+        $(".loader").fadeOut(500)
+        $(".cover-bg").fadeOut(500, function(){
+          $(".container-fluid").removeClass("custom-overflow-y-hidden");
+          $timeout(function(){
+            $("#particles").fadeIn(transitionTime * 3);
+          }, transitionTime );
+        });          
+      }, 1000)
+    })
   }
 
   if(window.location.hash){
