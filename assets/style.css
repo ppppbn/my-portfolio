@@ -556,3 +556,17 @@ hr {
 .overflow-hidden {
   overflow: hidden;
 }
+.content-grid-display {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+@media screen and (max-width: 550px) {
+  .content-grid-display {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+  }
+}
