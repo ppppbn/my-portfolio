@@ -5,6 +5,7 @@ html, body {
 
 body {
   background-color : rgba(0,0,0,0.97);
+  padding: 0px !important;
 }
 
 .bg-black {
@@ -591,5 +592,86 @@ hr {
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
     grid-column-gap: 0px;
+  }
+}
+
+.content-project__image-preview__overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.content-project__image-preview__overlay-background {
+  z-index: 3;
+  opacity: 0;
+  background: #000;
+  pointer-events: none;
+  --transition-time : 0.25s;
+  -webkit-transition : all ease-in-out var(--transition-time);
+  -moz-transition    : all ease-in-out var(--transition-time);
+  -ms-transition     : all ease-in-out var(--transition-time);
+  -o-transition      : all ease-in-out var(--transition-time);
+  transition         : all ease-in-out var(--transition-time);
+}
+
+.content-project__image-preview__overlay-icon-container {
+  z-index: 4;
+  opacity: 0;
+  cursor: auto;
+  --transition-time : 0.25s;
+  -webkit-transition : all ease-in-out var(--transition-time);
+  -moz-transition    : all ease-in-out var(--transition-time);
+  -ms-transition     : all ease-in-out var(--transition-time);
+  -o-transition      : all ease-in-out var(--transition-time);
+  transition         : all ease-in-out var(--transition-time);
+}
+
+
+.custom-position-relative {
+  position: relative;
+}
+
+.content-project__image-preview__overlay-icon {
+  font-size: 22px;
+  margin: 0px 10px;
+  color: #ccc;
+  cursor: pointer;
+  --transition-time : 0.25s;
+  -webkit-transition : all ease-in-out var(--transition-time);
+  -moz-transition    : all ease-in-out var(--transition-time);
+  -ms-transition     : all ease-in-out var(--transition-time);
+  -o-transition      : all ease-in-out var(--transition-time);
+  transition         : all ease-in-out var(--transition-time);
+  &:hover {
+    color: #fff;
+  }
+}
+
+.content-hoverable-image-preview:hover > .content-project__image-preview__overlay-icon-container {
+  opacity: 1 !important;
+}
+
+.content-hoverable-image-preview:hover > .content-project__image-preview__overlay-background {
+  opacity: 0.75 !important;
+}
+
+@media (min-width: 1280px) {
+  .modal-dialog {
+    width: 900px;
+  }
+}
+
+.custom-modal-content {
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  box-shadow: none;
+}
+
+.carousel-indicators .custom-indicator-black {
+  border: 1px solid black;
+  &.active {
+    background-color: black;
   }
 }

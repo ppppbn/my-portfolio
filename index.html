@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/style.css">
   <script src="./bower_components/angular/angular.min.js"></script>
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="./configs/variables.js"></script>
@@ -39,7 +39,8 @@
           <div class="nav-button-container">
             <div class="nav-home-container nav-button-container-child vertical-center" ng-click="changeState('home')">
               <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'home'}">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation"
+                  ng-class="{'visibility-hidden' : screenState !== 'home'}">
                   <div class="nav-child__selection-icon"></div>
                 </div>
                 <div class="nav-child__text-container">
@@ -50,7 +51,8 @@
             </div>
             <div class="nav-skill-container nav-button-container-child vertical-center" ng-click="changeState('skill')">
               <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'skill'}">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation"
+                  ng-class="{'visibility-hidden' : screenState !== 'skill'}">
                   <div class="nav-child__selection-icon"></div>
                 </div>
                 <div class="nav-child__text-container">
@@ -61,7 +63,8 @@
             </div>
             <div class="nav-project-container nav-button-container-child vertical-center" ng-click="changeState('project')">
               <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'project'}">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation"
+                  ng-class="{'visibility-hidden' : screenState !== 'project'}">
                   <div class="nav-child__selection-icon"></div>
                 </div>
                 <div class="nav-child__text-container">
@@ -72,7 +75,8 @@
             </div>
             <div class="nav-contact-container nav-button-container-child vertical-center" ng-click="changeState('contact')">
               <div class="custom-display-flex">
-                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation" ng-class="{'visibility-hidden' : screenState !== 'contact'}">
+                <div class="nav-child__selection-icon-container vertical-center horizontal-center ng-animation"
+                  ng-class="{'visibility-hidden' : screenState !== 'contact'}">
                   <div class="nav-child__selection-icon"></div>
                 </div>
                 <div class="nav-child__text-container">
@@ -122,7 +126,8 @@
         </nav>
       </div>
 
-      <div class="col-md-7 col-md-offset-3 col-xs-12 col-xs-offset-0 bg-black-transparent-1 custom-overflow-x-hidden custom-no-padding full-min-height" id="content-container">
+      <div class="col-md-7 col-md-offset-3 col-xs-12 col-xs-offset-0 bg-black-transparent-1 custom-overflow-x-hidden custom-no-padding full-min-height"
+        id="content-container">
         <div class="outer-particle-container">
           <div id="particles" class="full-height bg-particle">
             <div class="animated-spin">
@@ -142,10 +147,14 @@
                         <h3 class="text-uppercase">Hi, my name is Ngoc!</h3>
                         <p class="text-white">Pham Bao Ngoc, 22 years young, a web developer in Hanoi, Vietnam.</p>
                         <hr>
-                        <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at Techkids Software, an outsourcing company. Here I spend most of my time working on awesome projects
+                        <p class="custom-text-muted content-outer__separated-paragraph">I am currently working at
+                          Techkids Software, an outsourcing company. Here I spend most of my time working on awesome
+                          projects
                           and learning different technologies.</p>
-                        <p class="custom-text-muted">I believe good design is clear thinking and I love watching simple but creative, good UX designs.</p>
-                        <p class="custom-text-muted">I am also a lifetime learner. I spent my free time reading books and learning various new skills
+                        <p class="custom-text-muted">I believe good design is clear thinking and I love watching simple
+                          but creative, good UX designs.</p>
+                        <p class="custom-text-muted">I am also a lifetime learner. I spent my free time reading books
+                          and learning various new skills
                           via EDX, Udemy and FreeCodeCamp...</p>
                         <hr>
                       </div>
@@ -256,83 +265,84 @@
               </div>
 
               <!-- Skills -->
-              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container content-skill" ng-show="screenState === 'skill'">
+              <div class="col-md-10 col-xs-12 col-md-offset-1 ng-animation content-outer__info-container content-skill"
+                ng-show="screenState === 'skill'">
                 <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 custom-no-padding">
                   <h3 class="text-uppercase">Skills & Expertise</h3>
                   <h5 class="content-sub-text">I am developing my skills as a MERN Stack developer.</h5>
                   <hr>
                   <div class="content-outer__separated-paragraph content-grid-display">
                     <!-- <div class="col-xs-12 custom-display-flex-no-mobile"> -->
-                      <div class="content-skill__skill-container">
-                        <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
-                          <h5 class="text-uppercase">Frontend</h5>
+                    <div class="content-skill__skill-container">
+                      <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
+                        <h5 class="text-uppercase">Frontend</h5>
+                      </div>
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
+                        <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
+                          <i class="fas fa-desktop fa-3x"></i>
                         </div>
-                        <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
-                          <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
-                            <i class="fas fa-desktop fa-3x"></i>
-                          </div>
-                          <div class="col-lg-8 col-xs-12">
-                            <p class="custom-text-muted">- HTML5 / CSS3 / Less</p>
-                            <p class="custom-text-muted">- Typescript / Javascript ES6 / jQuery</p>
-                            <p class="custom-text-muted">- AngularJS</p>
-                            <p class="custom-text-muted">- ReactJS / Redux / Rematch</p>
-                            <p class="custom-text-muted">- NextJS ( SSR )</p>
-                          </div>
+                        <div class="col-lg-8 col-xs-12">
+                          <p class="custom-text-muted">- HTML5 / CSS3 / Less</p>
+                          <p class="custom-text-muted">- Typescript / Javascript ES6 / jQuery</p>
+                          <p class="custom-text-muted">- AngularJS</p>
+                          <p class="custom-text-muted">- ReactJS / Redux / Rematch</p>
+                          <p class="custom-text-muted">- NextJS ( SSR )</p>
                         </div>
                       </div>
-                      <div class="content-skill__skill-container">
-                        <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
-                          <h5 class="text-uppercase">Backend</h5>
+                    </div>
+                    <div class="content-skill__skill-container">
+                      <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
+                        <h5 class="text-uppercase">Backend</h5>
+                      </div>
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
+                        <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
+                          <i class="fas fa-server fa-3x"></i>
                         </div>
-                        <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
-                          <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
-                            <i class="fas fa-server fa-3x"></i>
-                          </div>
-                          <div class="col-lg-8 col-xs-12">
-                            <p class="custom-text-muted">- NodeJS (Express / Sails.io)</p>
-                            <p class="custom-text-muted">- Database : NoSQL (MongoDB)</p>
-                            <p class="custom-text-muted">- BigBlueButton</p>
-                            <p class="custom-text-muted">- ElasticSearch / Mongoosastic</p>
-                            <p class="hidden-lg hidden-md hidden-sm">&nbsp;</p>
-                          </div>
+                        <div class="col-lg-8 col-xs-12">
+                          <p class="custom-text-muted">- NodeJS (Express / Sails.io)</p>
+                          <p class="custom-text-muted">- Database : NoSQL (MongoDB)</p>
+                          <p class="custom-text-muted">- BigBlueButton</p>
+                          <p class="custom-text-muted">- ElasticSearch / Mongoosastic</p>
+                          <p class="hidden-lg hidden-md hidden-sm">&nbsp;</p>
                         </div>
                       </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="col-xs-12 custom-display-flex-no-mobile"> -->
-                      <div class="content-skill__skill-container">
-                        <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
-                          <h5 class="text-uppercase">Mobile</h5>
+                    <div class="content-skill__skill-container">
+                      <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
+                        <h5 class="text-uppercase">Mobile</h5>
+                      </div>
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
+                        <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
+                          <i class="fas fa-mobile fa-3x"></i>
                         </div>
-                        <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
-                          <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
-                            <i class="fas fa-mobile fa-3x"></i>
-                          </div>
-                          <div class="col-lg-8 col-xs-12">
-                            <p class="custom-text-muted">- React Native</p>
-                            <p class="custom-text-muted">- Native Base</p>
-                            <p class="custom-text-muted">- Firebase</p>
-                            <p class="custom-text-muted">- Redux / Rematch</p>
-                            <p class="custom-text-muted">- Redux Persist / Rematch Persist</p>
-                          </div>
+                        <div class="col-lg-8 col-xs-12">
+                          <p class="custom-text-muted">- React Native</p>
+                          <p class="custom-text-muted">- Native Base</p>
+                          <p class="custom-text-muted">- Firebase</p>
+                          <p class="custom-text-muted">- Redux / Rematch</p>
+                          <p class="custom-text-muted">- Redux Persist / Rematch Persist</p>
                         </div>
                       </div>
-                      <div class="content-skill__skill-container">
-                        <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
-                          <h5 class="text-uppercase">Others</h5>
+                    </div>
+                    <div class="content-skill__skill-container">
+                      <div class="col-xs-8 col-xs-offset-2 content-skill__title-container text-center">
+                        <h5 class="text-uppercase">Others</h5>
+                      </div>
+                      <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
+                        <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
+                          <i class="fas fa-project-diagram fa-3x"></i>
                         </div>
-                        <div class="col-xs-12 custom-no-padding custom-display-flex content-skill_content-container-child">
-                          <div class="col-lg-4 hidden-md hidden-sm hidden-xs vertical-center horizontal-center content-skill_icon-container">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                          </div>
-                          <div class="col-lg-8 col-xs-12">
-                            <p class="custom-text-muted">- Git / GitHub / GitLab</p>
-                            <p class="custom-text-muted">- Sketch / Photoshop</p>
-                            <p class="custom-text-muted">- Agile / Scrum</p>
-                            <p class="custom-text-muted">- Trello / Slack ...</p>
-                            <p class="hidden-lg hidden-md hidden-sm">&nbsp;</p>
-                          </div>
+                        <div class="col-lg-8 col-xs-12">
+                          <p class="custom-text-muted">- Git / GitHub / GitLab</p>
+                          <p class="custom-text-muted">- Sketch / Photoshop</p>
+                          <p class="custom-text-muted">- Agile / Scrum</p>
+                          <p class="custom-text-muted">- Trello / Slack ...</p>
+                          <p class="hidden-lg hidden-md hidden-sm">&nbsp;</p>
                         </div>
                       </div>
+                    </div>
                     <!-- </div> -->
                   </div>
                 </div>
@@ -343,16 +353,31 @@
                   <h3 class="text-uppercase">My projects</h3>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://ppppbn.github.io/freecodecamp-random-quote-machine/" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/random-quote-machine.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon"
+                              data-toggle="modal" data-target="#random-quote-machine"></span>
+                            <a href="https://ppppbn.github.io/freecodecamp-random-quote-machine/" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/random-quote-machine.jpg">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">Random Quote Machine</a></h5>
-                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/freecodecamp-random-quote-machine/" target="_blank">https://ppppbn.github.io/freecodecamp-random-quote-machine</a></p>
-                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/freecodecamp-random-quote-machine" target="_blank">https://github.com/ppppbn/freecodecamp-random-quote-machine</a></p>
+                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/freecodecamp-random-quote-machine/"
+                            target="_blank">https://ppppbn.github.io/freecodecamp-random-quote-machine</a></p>
+                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/freecodecamp-random-quote-machine"
+                            target="_blank">https://github.com/ppppbn/freecodecamp-random-quote-machine</a></p>
                       </div>
                     </div>
                   </div>
@@ -362,16 +387,31 @@
                   </div>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://ppppbn.github.io/freecodecamp-local-weather/" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/local-weather.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon"
+                              data-toggle="modal" data-target="#local-weather"></span>
+                            <a href="https://ppppbn.github.io/freecodecamp-local-weather/" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/local-weather-2.jpg">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">Local Weather App</h5>
-                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/freecodecamp-local-weather/" target="_blank">https://ppppbn.github.io/freecodecamp-local-weather</a></p>
-                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/freecodecamp-local-weather" target="_blank">https://github.com/ppppbn/freecodecamp-local-weather</a></p>                        
+                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/freecodecamp-local-weather/"
+                            target="_blank">https://ppppbn.github.io/freecodecamp-local-weather</a></p>
+                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/freecodecamp-local-weather"
+                            target="_blank">https://github.com/ppppbn/freecodecamp-local-weather</a></p>
                       </div>
                     </div>
                   </div>
@@ -381,16 +421,31 @@
                   </div>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://ppppbn.github.io/react-pascal-triangle/" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/pascal-triangle.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon"
+                              data-toggle="modal" data-target="#pascal-triangle"></span>
+                            <a href="https://ppppbn.github.io/react-pascal-triangle/" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/pascal-triangle-1.jpg">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">Pascal Triangle Generator Using ReactJS</h5>
-                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-pascal-triangle/" target="_blank">https://ppppbn.github.io/react-pascal-triangle</a></p>
-                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-pascal-triangle" target="_blank">https://github.com/ppppbn/react-pascal-triangle</a></p>
+                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-pascal-triangle/"
+                            target="_blank">https://ppppbn.github.io/react-pascal-triangle</a></p>
+                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-pascal-triangle"
+                            target="_blank">https://github.com/ppppbn/react-pascal-triangle</a></p>
                       </div>
                     </div>
                   </div>
@@ -400,16 +455,31 @@
                   </div>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://ppppbn.github.io/react-countdown-app/" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/countdown-app.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon"
+                              data-toggle="modal" data-target="#countdown-app"></span>
+                            <a href="https://ppppbn.github.io/react-countdown-app/" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/countdown-app-1.jpg">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">A Countdown App Using ReactJS</h5>
-                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-countdown-app/" target="_blank">https://ppppbn.github.io/react-countdown-app</a></p>
-                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-countdown-app" target="_blank">https://github.com/ppppbn/react-countdown-app</a></p>
+                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-countdown-app/"
+                            target="_blank">https://ppppbn.github.io/react-countdown-app</a></p>
+                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-countdown-app"
+                            target="_blank">https://github.com/ppppbn/react-countdown-app</a></p>
                       </div>
                     </div>
                   </div>
@@ -419,16 +489,31 @@
                   </div>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://ppppbn.github.io/react-reminder-pro/" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/reminder-pro.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon"
+                              data-toggle="modal" data-target="#reminder-pro"></span>
+                            <a href="https://ppppbn.github.io/react-reminder-pro/" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/reminder-pro-2.jpg">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">Reminder Pro Using ReactJS</h5>
-                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-reminder-pro/" target="_blank">https://ppppbn.github.io/react-reminder-pro</a></p>
-                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-reminder-pro" target="_blank">https://github.com/ppppbn/react-reminder-pro</a></p>
+                        <p class="custom-text-muted">Demo : <a class="custom-break-word" href="https://ppppbn.github.io/react-reminder-pro/"
+                            target="_blank">https://ppppbn.github.io/react-reminder-pro</a></p>
+                        <p class="custom-text-muted">Source code : <a class="custom-break-word" href="https://github.com/ppppbn/react-reminder-pro"
+                            target="_blank">https://github.com/ppppbn/react-reminder-pro</a></p>
                       </div>
                     </div>
                   </div>
@@ -438,16 +523,30 @@
                   </div>
 
                   <div class="col-xs-12 custom-no-padding content-project">
-                    <div class="col-md-5 col-xs-12 custom-no-padding-left">
-                      <a href="https://itunes.apple.com/app/id1436706368" target="_blank">
-                        <img class="thumbnail content-project__image-preview" src="./assets/img/dokodemo.png">
-                      </a>
+                    <div class="col-md-5 col-xs-12 custom-no-padding-left content-hoverable-image-preview">
+                      <div class="content-project__image-preview custom-position-relative content-hoverable-image-preview">
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-background">
+                        </div>
+                        <div class="content-project__image-preview__overlay content-project__image-preview__overlay-icon-container vertical-center horizontal-center">
+                          <div>
+                            <span class="glyphicon glyphicon-eye-open content-project__image-preview__overlay-icon" data-toggle="modal" data-target="#dokodemo"></span>
+                            <a href="https://itunes.apple.com/app/id1436706368" target="_blank">
+                              <span class="glyphicon glyphicon-new-window content-project__image-preview__overlay-icon"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div>
+                          <img class="thumbnail content-project__image-preview" src="./assets/img/dokodemo-1.png">
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-7 col-xs-12">
                       <div class="content-project__text-container">
                         <h5 class="content-project-title text-center">Dokodemo</h5>
-                        <p class="custom-text-muted">iOS : <a class="custom-break-word" href="https://itunes.apple.com/app/id1436706368" target="_blank">https://itunes.apple.com/app/id1436706368</a></p>
-                        <p class="custom-text-muted">Android : <a class="custom-break-word" href="https://bit.ly/Dokodemo" target="_blank">https://bit.ly/Dokodemo</a></p>
+                        <p class="custom-text-muted">iOS : <a class="custom-break-word" href="https://itunes.apple.com/app/id1436706368"
+                            target="_blank">https://itunes.apple.com/app/id1436706368</a></p>
+                        <p class="custom-text-muted">Android : <a class="custom-break-word" href="https://bit.ly/Dokodemo"
+                            target="_blank">https://bit.ly/Dokodemo</a></p>
                       </div>
                     </div>
                   </div>
@@ -459,9 +558,11 @@
                   <h3 class="text-uppercase">Anything I can help?</h3>
                   <h5 class="content-sub-text">Contact me now!</h5>
                   <hr>
-                  <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about myself or my experience, to ask for my resume, random questions or some
+                  <p class="custom-text-muted content-outer__separated-paragraph">Be it to request more info about
+                    myself or my experience, to ask for my resume, random questions or some
                     freelance jobs... just feel free to drop me a line anytime.</p>
-                  <p class="custom-text-muted">Download my resume <a class="cursor-pointer" href="./assets/files/pham-bao-ngoc-resume.pdf" download>here</a>.</p>
+                  <p class="custom-text-muted">Download my resume <a class="cursor-pointer" href="./assets/files/pham-bao-ngoc-resume.pdf"
+                      download>here</a>.</p>
                   <hr>
                   <div class="contact-container">
                     <div class="row">
@@ -499,6 +600,334 @@
         <div class="col-md-5 full-height bg-black-transparent-2 custom-no-padding"></div>
         <div class="col-md-4 full-height bg-black-transparent-3 custom-no-padding"></div>
         <div class="col-md-3 full-height bg-black-transparent-4 custom-no-padding"></div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="random-quote-machine" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="random-quote-machine-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="custom-indicator-black active" data-target="#random-quote-machine-carousel"
+                        data-slide-to="0" class="active"></li>
+                      <li class="custom-indicator-black" data-target="#random-quote-machine-carousel" data-slide-to="1"></li>
+                      <li class="custom-indicator-black" data-target="#random-quote-machine-carousel" data-slide-to="2"></li>
+                      <li class="custom-indicator-black" data-target="#random-quote-machine-carousel" data-slide-to="3"></li>
+                      <li class="custom-indicator-black" data-target="#random-quote-machine-carousel" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/random-quote-machine.jpg" alt="Random Quote Machine" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/random-quote-machine-2.jpg" alt="Random Quote Machine" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/random-quote-machine-3.jpg" alt="Random Quote Machine" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/random-quote-machine-4.jpg" alt="Random Quote Machine" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/random-quote-machine-5.jpg" alt="Random Quote Machine" style="width:100%;">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#random-quote-machine-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#random-quote-machine-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="local-weather" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="local-weather-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="custom-indicator-black active" data-target="#local-weather-carousel" data-slide-to="0"
+                        class="active"></li>
+                      <li class="custom-indicator-black" data-target="#local-weather-carousel" data-slide-to="1"></li>
+                      <li class="custom-indicator-black" data-target="#local-weather-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/local-weather-1.jpg" alt="Local Weather App" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/local-weather-2.jpg" alt="Local Weather App" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/local-weather-3.jpg" alt="Local Weather App" style="width:100%;">
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#local-weather-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#local-weather-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="pascal-triangle" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="pascal-triangle-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="custom-indicator-black active" data-target="#pascal-triangle-carousel" data-slide-to="0"
+                        class="active"></li>
+                      <li class="custom-indicator-black" data-target="#pascal-triangle-carousel" data-slide-to="1"></li>
+                      <li class="custom-indicator-black" data-target="#pascal-triangle-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/pascal-triangle-1.jpg" alt="Pascal Triangle Generator" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/pascal-triangle-2.jpg" alt="Pascal Triangle Generator" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/pascal-triangle-3.jpg" alt="Pascal Triangle Generator" style="width:100%;">
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#pascal-triangle-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#pascal-triangle-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="countdown-app" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="countdown-app-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="active" data-target="#countdown-app-carousel" data-slide-to="0"></li>
+                      <li class="" data-target="#countdown-app-carousel" data-slide-to="1"></li>
+                      <li class="" data-target="#countdown-app-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/countdown-app-1.jpg" alt="A Countdown App" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/countdown-app-2.jpg" alt="A Countdown App" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/countdown-app-3.jpg" alt="A Countdown App" style="width:100%;">
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#countdown-app-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#countdown-app-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="reminder-pro" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="reminder-pro-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="custom-indicator-black active" data-target="#reminder-pro-carousel" data-slide-to="0" class="active"></li>
+                      <li class="custom-indicator-black" data-target="#reminder-pro-carousel" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/reminder-pro-1.jpg" alt="Reminder Pro" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/reminder-pro-2.jpg" alt="Reminder Pro" style="width:100%;">
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#reminder-pro-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#reminder-pro-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <!-- Image modal -->
+        <div id="dokodemo" class="modal fade container" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content custom-modal-content">
+              <div class="modal-body">
+                <div class="full-width">
+                  <div id="dokodemo-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li class="active" data-target="#dokodemo-carousel" data-slide-to="0" class="active"></li>
+                      <li class="" data-target="#dokodemo-carousel" data-slide-to="1"></li>
+                      <li class="" data-target="#dokodemo-carousel" data-slide-to="2"></li>
+                      <li class="" data-target="#dokodemo-carousel" data-slide-to="3"></li>
+                      <li class="" data-target="#dokodemo-carousel" data-slide-to="4"></li>
+                      <li class="" data-target="#dokodemo-carousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="./assets/img/dokodemo-1.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/dokodemo-2.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/dokodemo-3.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/dokodemo-4.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/dokodemo-5.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/img/dokodemo-6.png" alt="Dokodemo" style="width:100%;">
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#dokodemo-carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#dokodemo-carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
