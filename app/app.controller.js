@@ -11,13 +11,16 @@ function appController($scope, $rootScope, $timeout) {
         $(".loader").fadeOut(500)
         $(".cover-bg").fadeOut(500, function(){
           $(".container-fluid").removeClass("custom-overflow-y-hidden");
-          $timeout(function(){
-            $("#particles").fadeIn(transitionTime * 3);
-          }, transitionTime );
+          // $timeout(function(){
+          //   $("#particles").fadeIn(transitionTime * 3);
+          // }, transitionTime );
         });          
       }, 1000)
     })
   }
+  particlesJS.load('particles', './configs/particles.json', function() {
+    // console.log('callback - particles.js config loaded');
+  });  
 
   if(window.location.hash){
     $scope.screenState = window.location.hash.substr(1);  
